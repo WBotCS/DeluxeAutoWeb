@@ -44,9 +44,9 @@ const OverlayMenu = ({ isOpen, onClose }) => {
       </div>
 
       {/* Right Content Panel (Placeholder) */}
-      <div className="w-2/3 h-full bg-black/50 flex flex-col justify-between p-8">
-        <div className="flex-grow grid grid-cols-2 gap-4">
-          <div className="relative bg-gray-800 rounded-lg overflow-hidden">
+      <div className="w-2/3 h-full bg-black/50 flex flex-col justify-between">
+        <div className="flex-grow grid grid-cols-2">
+          <div className="relative rounded-lg overflow-hidden">
             <img src="/hamilton-leclerc-ferrari-suits-2025.avif" alt="Ferrari Esports Series" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/50 flex items-end p-4">
               <div>
@@ -58,7 +58,7 @@ const OverlayMenu = ({ isOpen, onClose }) => {
               </div>
             </div>
           </div>
-          <div className="relative bg-gray-800 rounded-lg overflow-hidden">
+          <div className="relative rounded-lg overflow-hidden">
             <img src="/sf8_1.webp" alt="Scuderia Ferrari, the complete history" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/50 flex items-end p-4">
               <div>
@@ -72,7 +72,7 @@ const OverlayMenu = ({ isOpen, onClose }) => {
           </div>
         </div>
 
-        <div className="relative bg-gray-800 rounded-lg overflow-hidden mt-4 h-1/2">
+        <div className="relative rounded-lg overflow-hidden h-1/2">
           <img src="/01-italia.webp" alt="Ristorante Cavallino" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/50 flex items-end p-4">
             <div>
