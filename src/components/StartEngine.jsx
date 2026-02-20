@@ -49,7 +49,7 @@ const StartEngine = () => {
             <h3 className="text-sm md:text-base font-bold uppercase tracking-widest mb-4 animate-fade-in">
                 {slides[currentSlide].subtitle}
             </h3>
-            <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-wider mb-8 animate-fade-in-up">
+            <h2 className="text-4xl md:text-6xl font-light uppercase tracking-wider mb-8 animate-fade-in-up">
                 {slides[currentSlide].title}
             </h2>
         </div>

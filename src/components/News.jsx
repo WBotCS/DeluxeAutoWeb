@@ -6,19 +6,19 @@ const newsData = [
     id: 0,
     title: "FERRARI UNVEILS 2025 LIVERY OF 499P NUMBERS 50 AND 51",
     description: "Ferrari officially marked the start of its third season in the FIA World Endurance Championship's top class by unveiling the 2025 livery of the 499Ps which will compete under the official Ferrari - AF Corse team banner.",
-    image: "https://placehold.co/800x800?text=Ferrari+499P",
+    image: "/sf8_1.webp",
   },
   {
     id: 1,
     title: "THE MOST ANTICIPATED TEST",
     description: "The 296 Challenge undergoes international press scrutiny at the Monteblanco circuit",
-    image: "https://placehold.co/800x800?text=Ferrari+296+Challenge",
+    image: "/ferrari-296-gtb-review-specs-pricing-features-videos-and-more.webp",
   },
   {
     id: 2,
     title: "SCUDERIA FERRARI HP ANNOUNCES AMBIPAR AS TEAM PARTNER",
     description: "Scuderia Ferrari HP is pleased to announce a new partnership with Ambipar, a global leader in environmental solutions, as a Team Partner.",
-    image: "https://placehold.co/800x800?text=Ambipar+Partnership",
+    image: "/hamilton-leclerc-ferrari-suits-2025.avif",
   }
 ];
 
@@ -71,11 +71,11 @@ const News = () => {
         >
             {/* Left: Content */}
             <div className="w-full md:w-1/2 pr-0 md:pr-16 mb-12 md:mb-0 flex flex-col justify-center pl-12">
-            <h2 className="text-3xl md:text-5xl font-bold uppercase leading-tight mb-8">
+            <h2 className="text-4xl md:text-6xl font-thin uppercase leading-tight mb-8">
                 {newsData[currentSlide].title}
             </h2>
             
-            <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-8 max-w-md">
+            <p className="text-gray-600 text-base md:text-lg font-light leading-relaxed mb-8 max-w-md">
                 {newsData[currentSlide].description}
             </p>
             

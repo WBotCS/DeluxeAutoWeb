@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="relative z-10 w-full h-full flex flex-col items-center justify-end pb-24 text-center">
         {/* Text Content */}
         <div className="z-20">
-          <h1 className="text-4xl md:text-6xl font-bold text-white tracking-wider mb-6 uppercase font-sans">
+          <h1 className="text-4xl md:text-6xl font-light text-white tracking-wider mb-6 uppercase font-sans">
             Ferrari SF-25
           </h1>
           

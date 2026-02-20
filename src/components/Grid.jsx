@@ -16,7 +16,7 @@ const GridItem = ({ category, title, image, size }) => {
             {/* Content */}
             <div className="absolute bottom-12 left-0 w-full text-center text-white p-4">
                 <h4 className="text-sm font-bold uppercase tracking-widest mb-2 opacity-90">{category}</h4>
-                <h3 className="text-2xl md:text-4xl font-bold uppercase mb-6">{title}</h3>
+                <h3 className="text-2xl md:text-4xl font-light uppercase mb-6">{title}</h3>
                 
                  <button className="inline-flex items-center text-xs font-bold tracking-widest uppercase border border-white/30 px-6 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300">
                     Discover
@@ -36,28 +36,28 @@ const Grid = () => {
       <GridItem 
         category="Collections"
         title="New Arrivals"
-        image="https://placehold.co/800x600?text=Collections"
+        image="/01-italia.webp"
       />
 
       {/* Top Right - Magazine */}
       <GridItem 
         category="Magazine"
         title="The New V12 Icons"
-        image="https://placehold.co/800x600?text=Magazine"
+        image="/F677_still_02_v11_169.avif"
       />
 
       {/* Bottom Left - Sports Cars */}
       <GridItem 
         category="Sports Cars"
         title="Ferrari F80"
-        image="https://placehold.co/800x600?text=Ferrari+F80"
+        image="/Ferrari-MAIN-IMAGE-1.jpg"
       />
 
       {/* Bottom Right - Ferrari Approved */}
       <GridItem 
         category="Ferrari Approved"
         title="Pre-Owned"
-        image="https://placehold.co/800x600?text=Pre-Owned"
+        image="/Sainz-2024-mexico.webp"
       />
     </div>
   );
