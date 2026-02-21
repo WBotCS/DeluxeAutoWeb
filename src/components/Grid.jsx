@@ -34,29 +34,29 @@ const Grid = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 bg-black">
       {/* Top Left - Collections */}
       <GridItem 
-        category="Collections"
+        category="Inventory"
         title="New Arrivals"
         image="/01-italia.webp"
       />
 
       {/* Top Right - Magazine */}
       <GridItem 
-        category="Magazine"
-        title="The New V12 Icons"
+        category="Services"
+        title="Excellence in Service"
         image="/F677_still_02_v11_169.avif"
       />
 
       {/* Bottom Left - Sports Cars */}
       <GridItem 
-        category="Sports Cars"
-        title="Ferrari F80"
+        category="Showroom"
+        title="The Featured Fleet"
         image="/Ferrari-MAIN-IMAGE-1.jpg"
       />
 
       {/* Bottom Right - Ferrari Approved */}
       <GridItem 
-        category="Ferrari Approved"
-        title="Pre-Owned"
+        category="Deluxe Approved"
+        title="Certified Pre-Owned"
         image="/Sainz-2024-mexico.webp"
       />
     </div>

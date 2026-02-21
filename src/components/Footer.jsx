@@ -32,24 +32,24 @@ const Footer = () => {
         {/* Top Links Section */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-20 border-b border-gray-800 pb-16">
           <FooterColumn 
-            title="Racing" 
-            links={['Scuderia Ferrari HP', 'Charles Leclerc', 'Lewis Hamilton', 'Hypercar', 'GT Series', 'Esports', 'Scuderia Ferrari Driver Academy']} 
+            title="Inventory" 
+            links={['New Vehicles', 'Certified Pre-Owned', 'All Pre-Owned', 'Trade-In Valuation', 'Virtual Showroom', 'Vehicle Finder Service']} 
           />
           <FooterColumn 
-            title="Sports Cars" 
-            links={['Range', 'Configure your Ferrari', 'MyFerrari', 'Pre-owned', 'Dealers', 'Recall Information', 'TechInfo']} 
+            title="Purchase & Finance" 
+            links={['Finance Application', 'Leasing Programs', 'Monthly Payment Calculator', 'Current Incentives', 'Corporate Sales', 'Export Services']} 
           />
           <FooterColumn 
-            title="Collections" 
-            links={['Men', 'Women', 'Kids', 'Shoes', 'Eyewear', 'Collectibles', 'Scuderia Ferrari Selection']} 
+            title="Service & Parts" 
+            links={['Schedule Service', 'Maintenance Packages', 'Genuine Parts Shop', 'Boutique & Accessories', 'Tire Center', 'Roadside Assistance']} 
           />
           <FooterColumn 
-            title="Experiences" 
-            links={['Corse Clienti', 'Ferrari Esports Series', 'Ristorante Cavallino', 'Ferrari Museums', 'Ferrari World Abu Dhabi', 'Ferrari Land Barcelona']} 
+            title="Ownership" 
+            links={['Owner Benefits', 'Upcoming Events', 'Driving Academy', 'Client Reviews', 'Detailing & Protection', 'News & Editorial']} 
           />
           <FooterColumn 
-            title="About Us" 
-            links={['Corporate', 'Sustainability', 'Media Centre', 'News', 'Magazine', 'History', 'Join us']} 
+            title="Our Dealership" 
+            links={['Our Story', 'Meet the Team', 'Location & Hours', 'Careers', 'Contact Us', 'Privacy & Legal']} 
           />
         </div>
 
