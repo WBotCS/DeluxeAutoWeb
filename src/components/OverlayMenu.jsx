@@ -1,48 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { X, ChevronRight } from 'lucide-react';
 
-const menuData = [
-  {
-    id: 'driving-experience',
-    title: 'The Driving Experience',
-    mainImage: '/the driving experience.webp',
-    subCategories: [
-      { name: 'VIP Test Drives', image: '/ferrari-296-gtb-review-specs-pricing-features-videos-and-more.webp' },
-      { name: 'Home Delivery/Trial', image: '/Ferrari-MAIN-IMAGE-1.jpg' },
-    ],
-  },
-  {
-    id: 'events-community',
-    title: 'Events & Community',
-    mainImage: '/events and community.avif',
-    subCategories: [
-      { name: 'Owners\' Track Days', image: '/sf8_1.webp' },
-      { name: 'Cars & Coffee / Gala Nights', image: '/01-italia.webp' },
-      { name: 'Road Rallies', image: '/Sainz-2024-mexico.webp' },
-    ],
-  },
-  {
-    id: 'ownership-perks',
-    title: 'Ownership Perks',
-    mainImage: '/ownership perk.jpg',
-    subCategories: [
-      { name: 'The Owner\'s Lounge', image: '/F677_still_02_v11_169.avif' },
-      { name: 'Concierge Service', image: '/hamilton-leclerc-ferrari-suits-2025.avif' },
-      { name: 'Technical Clinics', image: '/Ferrari-MAIN-IMAGE-1.jpg' },
-    ],
-  },
-  {
-    id: 'customization-heritage',
-    title: 'Customization & Heritage',
-    mainImage: '/customization and heritage.webp',
-    subCategories: [
-      { name: 'The Design Studio', image: '/01-italia.webp' },
-      { name: 'The Heritage Collection', image: '/sf8_1.webp' },
-    ],
-  },
-];
-
-const OverlayMenu = ({ isOpen, onClose }) => {
+const OverlayMenu = ({ isOpen, onClose, menuData, title, defaultImages }) => {
   const [hoveredCategory, setHoveredCategory] = useState(null);
   const hoverTimeoutRef = useRef(null);
   return (
@@ -56,7 +15,7 @@ const OverlayMenu = ({ isOpen, onClose }) => {
           <img src="/logo.png" alt="Ferrari Logo" className="h-8 w-auto invert" />
         </div>
 
-        <span className="text-sm uppercase tracking-widest text-gray-400 mb-8">Experiences</span>
+        <span className="text-sm uppercase tracking-widest text-gray-400 mb-8">{title}</span>
 
         <nav className="flex-grow">
           {menuData.map((category) => (
@@ -114,11 +73,27 @@ const OverlayMenu = ({ isOpen, onClose }) => {
           ) : (
             <div className="flex-grow flex flex-col">
               <div className="grid grid-cols-2 flex-grow">
-                <div className="relative overflow-hidden">
-                  <img src="/hamilton-leclerc-ferrari-suits-2025.avif" alt="Ferrari Esports Series" className="w-full h-full object-cover" />
+                {defaultImages.slice(0, 2).map((item, index) => (
+                <div key={index} className="relative overflow-hidden">
+                    <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-black/50 flex items-end p-4">
+                      <div>
+                        <h3 className="text-lg font-light uppercase">{item.name}</h3>
+                        <button className="flex items-center text-white text-xs uppercase mt-2 group">
+                          <span className="mr-1">Discover</span>
+                          <ChevronRight size={14} className="group-hover:text-red-600" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {!hoveredCategory && title === 'Experiences' && defaultImages.length > 2 && (
+                <div className="relative overflow-hidden flex-grow mt-0">
+                  <img src={defaultImages[2].image} alt={defaultImages[2].name} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-black/50 flex items-end p-4">
                     <div>
-                      <h3 className="text-lg font-light uppercase">Ferrari Esports Series</h3>
+                      <h3 className="text-lg font-light uppercase">{defaultImages[2].name}</h3>
                       <button className="flex items-center text-white text-xs uppercase mt-2 group">
                         <span className="mr-1">Discover</span>
                         <ChevronRight size={14} className="group-hover:text-red-600" />
@@ -126,38 +101,13 @@ const OverlayMenu = ({ isOpen, onClose }) => {
                     </div>
                   </div>
                 </div>
-                <div className="relative overflow-hidden">
-                  <img src="/sf8_1.webp" alt="Scuderia Ferrari, the complete history" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-black/50 flex items-end p-4">
-                    <div>
-                      <h3 className="text-lg font-light uppercase">Scuderia Ferrari, the complete history</h3>
-                      <button className="flex items-center text-white text-xs uppercase mt-2 group">
-                        <span className="mr-1">Discover</span>
-                        <ChevronRight size={14} className="group-hover:text-red-600" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative overflow-hidden flex-grow mt-0">
-                <img src="/01-italia.webp" alt="Ristorante Cavallino" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-black/50 flex items-end p-4">
-                  <div>
-                    <h3 className="text-lg font-light uppercase">Book a table at Ristorante Cavallino</h3>
-                    <button className="flex items-center text-white text-xs uppercase mt-2 group">
-                      <span className="mr-1">Discover</span>
-                      <ChevronRight size={14} className="group-hover:text-red-600" />
-                    </button>
-                  </div>
-                </div>
-              </div>
+              )}
             </div>
           )}
         </div>
 
         {/* Events Calendar Section */}
-        {!hoveredCategory && (
+        {!hoveredCategory && title === 'Experiences' && (
           <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center py-8 px-4">
             <h3 className="text-2xl font-light uppercase tracking-widest mb-4">Events Calendar</h3>
             <button className="flex items-center text-white text-xs uppercase mt-2 group border border-white/30 px-6 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300">

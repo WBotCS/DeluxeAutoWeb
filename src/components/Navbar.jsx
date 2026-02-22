@@ -45,11 +45,11 @@ const Navbar = ({ onOverlayMenuToggle }) => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-sm font-light tracking-widest uppercase text-white">
-          <a href="#" className="hover:text-ferrari-red transition-colors" onClick={onOverlayMenuToggle}>Experiences</a>
-          <a href="#" className="hover:text-ferrari-red transition-colors">Inventory</a>
-          <a href="#" className="hover:text-ferrari-red transition-colors">Pre-Order</a>
-          <a href="#" className="hover:text-ferrari-red transition-colors">Meet the Team</a>
-          <a href="#" className="hover:text-ferrari-red transition-colors">About Us</a>
+          <a href="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle('experiences')}>Experiences</a>
+          <a href="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle('inventory')}>Inventory</a>
+          <a href="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>Pre-Order</a>
+          <a href="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>Meet the Team</a>
+          <a href="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>About Us</a>
         </div>
 
         {/* Search & Mobile Toggle */}
@@ -68,11 +68,11 @@ const Navbar = ({ onOverlayMenuToggle }) => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-black absolute top-full w-full py-4 px-6 flex flex-col space-y-4 text-white text-base font-light tracking-widest uppercase border-t border-gray-800">
-          <a href="#" className="hover:text-ferrari-red">Racing</a>
-          <a href="#" className="hover:text-ferrari-red">Sports Cars</a>
-          <a href="#" className="hover:text-ferrari-red">Collections</a>
-          <a href="#" className="hover:text-ferrari-red" onClick={onOverlayMenuToggle}>Experiences</a>
-          <a href="#" className="hover:text-ferrari-red">About Us</a>
+          <a href="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle(null)}>Racing</a>
+          <a href="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle(null)}>Sports Cars</a>
+          <a href="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle(null)}>Collections</a>
+          <a href="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle('experiences')}>Experiences</a>
+          <a href="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle(null)}>About Us</a>
           <div className="flex items-center pt-4 border-t border-gray-800">
             <span className="mr-2">Search</span>
             <Search size={16} />
