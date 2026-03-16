@@ -8,7 +8,7 @@ const OverlayMenu = ({ isOpen, onClose, menuData, title, defaultImages }) => {
   return (
     <div className={`fixed inset-0 z-50 bg-black text-white transform transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'} flex`}>
       {/* Left Menu Panel */}
-      <div className="w-1/4 h-full bg-zinc-900 p-8 flex flex-col">
+      <div className="w-1/4 h-full bg-black p-8 flex flex-col">
         <div className="flex items-center mb-12">
           <button onClick={onClose} className="text-white hover:text-gray-400 mr-4">
             <X size={24} />
@@ -44,7 +44,7 @@ const OverlayMenu = ({ isOpen, onClose, menuData, title, defaultImages }) => {
       {/* Sub-categories Panel */}
       {hoveredCategory && (
         <div
-          className="w-1/5 h-full bg-zinc-800 p-8 flex flex-col justify-start"
+          className="w-1/5 h-full bg-zinc-900 p-8 flex flex-col justify-start"
           onMouseEnter={() => clearTimeout(hoverTimeoutRef.current)}
           onMouseLeave={() => setHoveredCategory(null)}
         >
