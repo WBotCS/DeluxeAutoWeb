@@ -35,11 +35,11 @@ const VehicleCard = ({ vehicle }) => {
               src={imageSrc}
               alt={vehicle.name}
               className={`w-full h-40 flex-shrink-0 ${
-                imageSrc === '/IS350.png' || imageSrc === '/LC.avif'
+                imageSrc === '/IS350.png' || imageSrc === '/LC.avif' || imageSrc === '/vantage.png'
                   ? 'object-contain'
                   : 'object-cover'
               } ${
-                imageSrc === '/LCInterior.avif' ? 'object-contain object-[50%_0%]' : ''
+                imageSrc === '/LCInterior.avif' || imageSrc === '/interiorvantage.avif' ? 'object-contain object-[50%_0%]' : ''
               }`}
             />
           ))}
@@ -63,14 +63,14 @@ const VehicleCard = ({ vehicle }) => {
       </div>
       <div className="p-4">
         <h3 className="text-xl font-light uppercase mb-1">{vehicle.name}</h3>
-        <p className="text-gray-400 text-sm mb-2">Used 19,749 mi.</p>
+        <p className="text-gray-400 text-sm mb-2">{vehicle.mileage}</p>
         <p className="text-white text-lg font-medium">{vehicle.price}</p>
-        <p className="text-gray-500 text-sm mt-2">Available in 2 - 3 Weeks</p>
+        <p className="text-gray-500 text-sm mt-2">{vehicle.availability}</p>
         {/* Add more features as seen in the example */}
         <div className="mt-4 pt-4 border-t border-gray-700 text-sm text-gray-400">
-          <p className="flex items-center"><span className="mr-2">•</span>EPA EST. RANGE: 394 mi²</p>
-          <p className="flex items-center"><span className="mr-2">•</span>POWER: 430 hp</p>
-          <p className="flex items-center"><span className="mr-2">•</span>0-60 MPH: 4.5 secs</p>
+          <p className="flex items-center"><span className="mr-2">•</span>EPA EST. RANGE: {vehicle.epaRange}</p>
+          <p className="flex items-center"><span className="mr-2">•</span>POWER: {vehicle.power}</p>
+          <p className="flex items-center"><span className="mr-2">•</span>0-60 MPH: {vehicle.acceleration}</p>
         </div>
         <button className="w-full text-center text-white text-sm uppercase px-4 py-2 mt-4 border border-white/30 rounded-full hover:bg-white hover:text-black transition-all duration-300">
           More Features

@@ -40,7 +40,7 @@ const Navbar = ({ onOverlayMenuToggle }) => {
         {/* Logo */}
         <div className="flex items-center">
           <Link to="/" className="text-white" onClick={() => onOverlayMenuToggle(null)}>
-            <img src="/logo.png" alt="Ferrari Logo" className="h-12 w-auto invert" />
+            <img src="/logo.png" alt="Ferrari Logo" className="h-12 w-auto brightness-150" />
           </Link>
         </div>
 
