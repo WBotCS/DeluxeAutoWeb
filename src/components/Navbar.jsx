@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { Search, Menu, X, Shield } from 'lucide-react';
 
 const Navbar = ({ onOverlayMenuToggle }) => {
@@ -45,11 +46,11 @@ const Navbar = ({ onOverlayMenuToggle }) => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-sm font-light tracking-widest uppercase text-white">
-          <a href="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle('experiences')}>Experiences</a>
-          <a href="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle('inventory')}>Inventory</a>
-          <a href="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>Pre-Order</a>
-          <a href="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>Meet the Team</a>
-          <a href="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>About Us</a>
+          <Link to="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle('experiences')}>Experiences</Link>
+          <Link to="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle('inventory')}>Inventory</Link>
+          <Link to="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>Pre-Order</Link>
+          <Link to="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>Meet the Team</Link>
+          <Link to="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>About Us</Link>
         </div>
 
         {/* Search & Mobile Toggle */}
@@ -68,11 +69,11 @@ const Navbar = ({ onOverlayMenuToggle }) => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-black absolute top-full w-full py-4 px-6 flex flex-col space-y-4 text-white text-base font-light tracking-widest uppercase border-t border-gray-800">
-          <a href="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle(null)}>Racing</a>
-          <a href="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle(null)}>Sports Cars</a>
-          <a href="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle(null)}>Collections</a>
-          <a href="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle('experiences')}>Experiences</a>
-          <a href="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle(null)}>About Us</a>
+          <Link to="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle(null)}>Racing</Link>
+          <Link to="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle(null)}>Sports Cars</Link>
+          <Link to="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle(null)}>Collections</Link>
+          <Link to="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle('experiences')}>Experiences</Link>
+          <Link to="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle(null)}>About Us</Link>
           <div className="flex items-center pt-4 border-t border-gray-800">
             <span className="mr-2">Search</span>
             <Search size={16} />

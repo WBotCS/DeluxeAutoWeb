@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import StartEngine from './components/StartEngine';
@@ -6,6 +7,7 @@ import News from './components/News';
 import Grid from './components/Grid';
 import Footer from './components/Footer';
 import OverlayMenu from './components/OverlayMenu';
+import NewVehiclesPage from './components/NewVehiclesPage';
 
 const experienceMenuData = [
   {
@@ -53,32 +55,54 @@ const inventoryMenuData = [
     id: 'new-vehicles',
     title: 'New Vehicles',
     mainImage: '/ferrari-296-gtb-review-specs-pricing-features-videos-and-more.webp',
+    path: '/inventory/new-vehicles',
     subCategories: [
-      { name: 'New Vehicles', image: '/ferrari-296-gtb-review-specs-pricing-features-videos-and-more.webp' },
+      { name: 'New Vehicles', image: '/ferrari-296-gtb-review-specs-pricing-features-videos-and-more.webp', path: '/inventory/new-vehicles' },
     ],
   },
   {
     id: 'certified-pre-owned',
     title: 'Certified Pre-Owned',
     mainImage: '/Sainz-2024-mexico.webp',
+    path: '/inventory/certified-pre-owned',
     subCategories: [
-      { name: 'Certified Pre-Owned', image: '/Sainz-2024-mexico.webp' },
+      { name: 'Certified Pre-Owned', image: '/Sainz-2024-mexico.webp', path: '/inventory/certified-pre-owned' },
     ],
   },
   {
     id: 'all-pre-owned',
     title: 'All Pre-Owned',
     mainImage: '/01-italia.webp',
+    path: '/inventory/all-pre-owned',
     subCategories: [
-      { name: 'All Pre-Owned', image: '/01-italia.webp' },
+      { name: 'All Pre-Owned', image: '/01-italia.webp', path: '/inventory/all-pre-owned' },
+    ],
+  },
+  {
+    id: 'trade-in-valuation',
+    title: 'Trade-In Valuation',
+    mainImage: '/Ferrari-MAIN-IMAGE-1.jpg',
+    path: '/inventory/trade-in-valuation',
+    subCategories: [
+      { name: 'Trade-In Valuation', image: '/Ferrari-MAIN-IMAGE-1.jpg', path: '/inventory/trade-in-valuation' },
+    ],
+  },
+  {
+    id: 'virtual-showroom',
+    title: 'Virtual Showroom',
+    mainImage: '/F677_still_02_v11_169.avif',
+    path: '/inventory/virtual-showroom',
+    subCategories: [
+      { name: 'Virtual Showroom', image: '/F677_still_02_v11_169.avif', path: '/inventory/virtual-showroom' },
     ],
   },
   {
     id: 'vehicle-finder-service',
     title: 'Vehicle Finder Service',
     mainImage: '/sf8_1.webp',
+    path: '/inventory/vehicle-finder-service',
     subCategories: [
-      { name: 'Vehicle Finder Service', image: '/sf8_1.webp' },
+      { name: 'Vehicle Finder Service', image: '/sf8_1.webp', path: '/inventory/vehicle-finder-service' },
     ],
   },
 ];
@@ -116,15 +140,24 @@ function App() {
   const { menuData, title, defaultImages } = getMenuProps();
 
   return (
-    <div className="bg-black min-h-screen">
-      <Navbar onOverlayMenuToggle={handleOverlayMenuToggle} />
-      <Hero />
-      <StartEngine />
-      <News />
-      <Grid />
-      <Footer />
-      <OverlayMenu isOpen={!!currentMenuType} onClose={() => handleOverlayMenuToggle(null)} menuData={menuData} title={title} defaultImages={defaultImages} />
-    </div>
+    <Router>
+      <div className="bg-black min-h-screen">
+        <Navbar onOverlayMenuToggle={handleOverlayMenuToggle} />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <StartEngine />
+              <News />
+              <Grid />
+              <Footer />
+            </>
+          } />
+          <Route path="/inventory/new-vehicles" element={<NewVehiclesPage />} />
+        </Routes>
+        <OverlayMenu isOpen={!!currentMenuType} onClose={() => handleOverlayMenuToggle(null)} menuData={menuData} title={title} defaultImages={defaultImages} />
+      </div>
+    </Router>
   );
 }
 

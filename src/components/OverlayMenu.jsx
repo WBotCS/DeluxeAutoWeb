@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { X, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const OverlayMenu = ({ isOpen, onClose, menuData, title, defaultImages }) => {
   const [hoveredCategory, setHoveredCategory] = useState(null);
@@ -50,9 +51,14 @@ const OverlayMenu = ({ isOpen, onClose, menuData, title, defaultImages }) => {
           <span className="text-sm uppercase tracking-widest text-gray-400 mb-8">{hoveredCategory.title}</span>
           <nav className="flex-grow space-y-4">
             {hoveredCategory.subCategories.map((subCat, index) => (
-              <a key={index} href="#" className="block text-lg font-light text-white hover:text-red-600 transition-colors uppercase">
+              <Link
+                key={index}
+                to={subCat.path || '#'}
+                onClick={onClose}
+                className="block text-lg font-light text-white hover:text-red-600 transition-colors uppercase"
+              >
                 {subCat.name}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>
@@ -69,6 +75,17 @@ const OverlayMenu = ({ isOpen, onClose, menuData, title, defaultImages }) => {
                 alt={hoveredCategory.title}
                 className="w-full h-full object-cover transition-opacity duration-300"
               />
+              <div className="absolute inset-0 bg-black/50 flex items-end p-4">
+                <div>
+                  <h3 className="text-lg font-light uppercase">
+                    {hoveredCategory.title}
+                  </h3>
+                  <Link to={hoveredCategory.path || '#'} onClick={onClose} className="flex items-center text-white text-xs uppercase mt-2 group">
+                    <span className="mr-1">Discover</span>
+                    <ChevronRight size={14} className="group-hover:text-red-600" />
+                  </Link>
+                </div>
+              </div>
             </div>
           ) : (
             <div className="flex-grow flex flex-col">
@@ -78,12 +95,12 @@ const OverlayMenu = ({ isOpen, onClose, menuData, title, defaultImages }) => {
                     <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-black/50 flex items-end p-4">
                       <div>
-                        <h3 className="text-lg font-light uppercase">{item.name}</h3>
-                        <button className="flex items-center text-white text-xs uppercase mt-2 group">
-                          <span className="mr-1">Discover</span>
-                          <ChevronRight size={14} className="group-hover:text-red-600" />
-                        </button>
-                      </div>
+                      <h3 className="text-lg font-light uppercase">{item.name}</h3>
+                      <Link to="#" onClick={onClose} className="flex items-center text-white text-xs uppercase mt-2 group">
+                        <span className="mr-1">Discover</span>
+                        <ChevronRight size={14} className="group-hover:text-red-600" />
+                      </Link>
+                    </div>
                     </div>
                   </div>
                 ))}
@@ -110,10 +127,10 @@ const OverlayMenu = ({ isOpen, onClose, menuData, title, defaultImages }) => {
         {!hoveredCategory && title === 'Experiences' && (
           <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center py-8 px-4">
             <h3 className="text-2xl font-light uppercase tracking-widest mb-4">Events Calendar</h3>
-            <button className="flex items-center text-white text-xs uppercase mt-2 group border border-white/30 px-6 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300">
+            <Link to="/events-calendar" onClick={onClose} className="flex items-center text-white text-xs uppercase mt-2 group border border-white/30 px-6 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300">
               <span className="mr-1">Discover More</span>
               <ChevronRight size={14} className="group-hover:text-red-600" />
-            </button>
+            </Link>
           </div>
         )}
       </div>
