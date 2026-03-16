@@ -24,18 +24,26 @@ const VehicleCard = ({ vehicle }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative">
-        <img
-          src={vehicle.images[currentImageIndex]}
-          alt={vehicle.name}
-          className={`w-full h-40 ${
-            vehicle.images[currentImageIndex] === '/IS350.png' || vehicle.images[currentImageIndex] === '/LC.avif'
-              ? 'object-contain'
-              : 'object-cover'
-          } ${
-            vehicle.images[currentImageIndex] === '/LCInterior.avif' ? 'object-contain object-[50%_0%]' : ''
-          }`}
-        />
+      <div className="relative overflow-hidden">
+        <div
+          className="flex transition-transform duration-300 ease-in-out"
+          style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
+        >
+          {vehicle.images.map((imageSrc, index) => (
+            <img
+              key={index}
+              src={imageSrc}
+              alt={vehicle.name}
+              className={`w-full h-40 flex-shrink-0 ${
+                imageSrc === '/IS350.png' || imageSrc === '/LC.avif'
+                  ? 'object-contain'
+                  : 'object-cover'
+              } ${
+                imageSrc === '/LCInterior.avif' ? 'object-contain object-[50%_0%]' : ''
+              }`}
+            />
+          ))}
+        </div>
         {vehicle.images.length > 1 && isHovered && (
           <>
             <button

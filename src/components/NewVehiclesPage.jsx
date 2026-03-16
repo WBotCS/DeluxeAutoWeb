@@ -14,9 +14,9 @@ const NewVehiclesPage = () => {
     },
     {
       id: 2,
-      name: 'Ferrari SF90 Stradale',
+      name: 'LC500 Coupe',
       images: ['/LC.avif', '/LCInterior.avif'],
-      price: 'Starting from $510,000',
+      price: 'Starting from $102,500',
       description: 'The SF90 Stradale is the first series-production PHEV (Plug-in Hybrid Electric Vehicle) from Ferrari. It guarantees a performance unmatched by any other production car.',
     },
     {
