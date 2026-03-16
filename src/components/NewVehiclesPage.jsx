@@ -1,34 +1,35 @@
 import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
+import VehicleCard from './VehicleCard';
 
 const NewVehiclesPage = () => {
   const [showFilters, setShowFilters] = useState(true);
   const vehicles = [
     {
       id: 1,
-      name: 'Ferrari 296 GTB',
-      image: '/Ferrari 296 GTB.jpg',
-      price: 'Starting from $340,000',
+      name: 'IS350 F-Sport',
+      images: ['/IS350.png', '/IS350I.jpg.avif'],
+      price: 'Starting from $54,000',
       description: 'A new era of Ferrari mid-rear-engined berlinetta sports cars, the 296 GTB redefines the idea of fun behind the wheel to deliver pure emotions.',
     },
     {
       id: 2,
       name: 'Ferrari SF90 Stradale',
-      image: '/sf8_1.webp',
+      images: ['/LC.avif', '/LCInterior.avif'],
       price: 'Starting from $510,000',
       description: 'The SF90 Stradale is the first series-production PHEV (Plug-in Hybrid Electric Vehicle) from Ferrari. It guarantees a performance unmatched by any other production car.',
     },
     {
       id: 3,
       name: 'Ferrari Roma',
-      image: '/Ferrari-MAIN-IMAGE-1.jpg',
+      images: ['/Ferrari-MAIN-IMAGE-1.jpg'],
       price: 'Starting from $222,000',
       description: 'The Ferrari Roma is a 2+ coupé with a sleek, contemporary design and a sophisticated interior. It embodies the concept of a grand touring car.',
     },
     {
         id: 4,
         name: 'Ferrari Portofino M',
-        image: '/the driving experience.webp',
+        images: ['/the driving experience.webp'],
         price: 'Starting from $245,000',
         description: 'The Ferrari Portofino M, the evolution of the Ferrari Portofino, is the first spider in the Prancing Horse\'s history to feature an 8-speed dual-clutch gearbox.',
       },
@@ -154,24 +155,7 @@ const NewVehiclesPage = () => {
 
           <div className={`grid grid-cols-1 md:grid-cols-2 ${showFilters ? 'lg:grid-cols-3' : 'lg:grid-cols-4'} gap-6`}>
             {vehicles.map((vehicle) => (
-              <div key={vehicle.id} className="bg-zinc-900 rounded-lg overflow-hidden shadow-lg">
-                <img src={vehicle.image} alt={vehicle.name} className="w-full h-48 object-cover" />
-                <div className="p-4">
-                  <h3 className="text-xl font-light uppercase mb-1">{vehicle.name}</h3>
-                  <p className="text-gray-400 text-sm mb-2">Used 19,749 mi.</p>
-                  <p className="text-white text-lg font-medium">{vehicle.price}</p>
-                  <p className="text-gray-500 text-sm mt-2">Available in 2 - 3 Weeks</p>
-                  {/* Add more features as seen in the example */}
-                  <div className="mt-4 pt-4 border-t border-gray-700 text-sm text-gray-400">
-                    <p className="flex items-center"><span className="mr-2">•</span>EPA EST. RANGE: 394 mi²</p>
-                    <p className="flex items-center"><span className="mr-2">•</span>POWER: 430 hp</p>
-                    <p className="flex items-center"><span className="mr-2">•</span>0-60 MPH: 4.5 secs</p>
-                  </div>
-                  <button className="w-full text-center text-white text-sm uppercase px-4 py-2 mt-4 border border-white/30 rounded-full hover:bg-white hover:text-black transition-all duration-300">
-                    More Features
-                  </button>
-                </div>
-              </div>
+              <VehicleCard key={vehicle.id} vehicle={vehicle} />
             ))}
           </div>
         </div>
