@@ -152,7 +152,7 @@ const NewVehiclesPage = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className={`grid grid-cols-1 md:grid-cols-2 ${showFilters ? 'lg:grid-cols-3' : 'lg:grid-cols-4'} gap-6`}>
             {vehicles.map((vehicle) => (
               <div key={vehicle.id} className="bg-zinc-900 rounded-lg overflow-hidden shadow-lg">
                 <img src={vehicle.image} alt={vehicle.name} className="w-full h-48 object-cover" />
