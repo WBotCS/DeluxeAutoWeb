@@ -60,15 +60,7 @@ const inventoryMenuData = [
       { name: 'New Vehicles', image: '/ferrari-296-gtb-review-specs-pricing-features-videos-and-more.webp', path: '/inventory/new-vehicles' },
     ],
   },
-  {
-    id: 'certified-pre-owned',
-    title: 'Certified Pre-Owned',
-    mainImage: '/Sainz-2024-mexico.webp',
-    path: '/inventory/certified-pre-owned',
-    subCategories: [
-      { name: 'Certified Pre-Owned', image: '/Sainz-2024-mexico.webp', path: '/inventory/certified-pre-owned' },
-    ],
-  },
+
   {
     id: 'all-pre-owned',
     title: 'All Pre-Owned',
@@ -76,26 +68,11 @@ const inventoryMenuData = [
     path: '/inventory/all-pre-owned',
     subCategories: [
       { name: 'All Pre-Owned', image: '/01-italia.webp', path: '/inventory/all-pre-owned' },
+      { name: 'Certified Pre-Owned', image: '/Sainz-2024-mexico.webp', path: '/inventory/certified-pre-owned' },
     ],
   },
-  {
-    id: 'trade-in-valuation',
-    title: 'Trade-In Valuation',
-    mainImage: '/Ferrari-MAIN-IMAGE-1.jpg',
-    path: '/inventory/trade-in-valuation',
-    subCategories: [
-      { name: 'Trade-In Valuation', image: '/Ferrari-MAIN-IMAGE-1.jpg', path: '/inventory/trade-in-valuation' },
-    ],
-  },
-  {
-    id: 'virtual-showroom',
-    title: 'Virtual Showroom',
-    mainImage: '/F677_still_02_v11_169.avif',
-    path: '/inventory/virtual-showroom',
-    subCategories: [
-      { name: 'Virtual Showroom', image: '/F677_still_02_v11_169.avif', path: '/inventory/virtual-showroom' },
-    ],
-  },
+
+
   {
     id: 'vehicle-finder-service',
     title: 'Vehicle Finder Service',
@@ -103,6 +80,7 @@ const inventoryMenuData = [
     path: '/inventory/vehicle-finder-service',
     subCategories: [
       { name: 'Vehicle Finder Service', image: '/sf8_1.webp', path: '/inventory/vehicle-finder-service' },
+      { name: 'Trade-In', image: '/Ferrari-MAIN-IMAGE-1.jpg', path: '/inventory/trade-in-valuation' },
     ],
   },
 ];
@@ -115,7 +93,7 @@ const experienceDefaultImages = [
 
 const inventoryDefaultImages = [
   { name: 'Service Center', image: '/Ferrari-MAIN-IMAGE-1.jpg' },
-  { name: 'Certified Deluxe', image: '/Sainz-2024-mexico.webp' },
+  { name: 'Certified Pre-Owned', image: '/Sainz-2024-mexico.webp' },
   { name: 'New Arrivals', image: '/01-italia.webp' },
 ];
 

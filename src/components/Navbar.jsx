@@ -39,9 +39,9 @@ const Navbar = ({ onOverlayMenuToggle }) => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
-          <a href="#" className="text-white">
+          <Link to="/" className="text-white" onClick={() => onOverlayMenuToggle(null)}>
             <img src="/logo.png" alt="Ferrari Logo" className="h-12 w-auto invert" />
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Menu */}
