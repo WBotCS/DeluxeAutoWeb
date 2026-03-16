@@ -8,6 +8,7 @@ import Grid from './components/Grid';
 import Footer from './components/Footer';
 import OverlayMenu from './components/OverlayMenu';
 import NewVehiclesPage from './components/NewVehiclesPage';
+import PreOrderPage from './components/PreOrderPage'; // New Import
 
 const experienceMenuData = [
   {
@@ -72,7 +73,6 @@ const inventoryMenuData = [
     ],
   },
 
-
   {
     id: 'vehicle-finder-service',
     title: 'Vehicle Finder Service',
@@ -132,6 +132,7 @@ function App() {
             </>
           } />
           <Route path="/inventory/new-vehicles" element={<NewVehiclesPage />} />
+          <Route path="/pre-order" element={<PreOrderPage />} />
         </Routes>
         <OverlayMenu isOpen={!!currentMenuType} onClose={() => handleOverlayMenuToggle(null)} menuData={menuData} title={title} defaultImages={defaultImages} />
       </div>

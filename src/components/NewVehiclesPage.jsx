@@ -33,16 +33,18 @@ const NewVehiclesPage = () => {
       name: 'Ferrari 296 GTB',
       images: ['/296GTB.png', '/296interior.avif'],
       price: 'Starting from $346,950',
-      availability: 'Available 2-3 Weeks',
+      availability: 'Available Now',
       mileage: 'Brand New',
-      description: 'The Ferrari Roma is a 2+ coupé with a sleek, contemporary design and a sophisticated interior. It embodies the concept of a grand touring car.',
+      description: 'The Ferrari 296 GTB is a mid-engine sports car that combines the power of a V12 engine with the agility of a 4-door coupe. It features a 7-speed dual-clutch gearbox and a 60-inch display.',
     },
     {
         id: 4,
-        name: 'Ferrari Portofino M',
+        name: 'Aston Martin Vantage',
         images: ['/vantage.png', '/interiorvantage.avif'],
-        price: 'Starting from $245,000',
-        description: 'The Ferrari Portofino M, the evolution of the Ferrari Portofino, is the first spider in the Prancing Horse\'s history to feature an 8-speed dual-clutch gearbox.',
+        price: 'Starting from $191,000',
+        availability: 'Available Now',
+        mileage: 'Brand New',
+        description: 'The Aston Martin Vantage is a mid-engine sports car that combines the power of a V12 engine with the agility of a 4-door coupe. It features a 7-speed dual-clutch gearbox and a 60-inch display.',
       },
   ];
 

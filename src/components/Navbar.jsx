@@ -48,7 +48,7 @@ const Navbar = ({ onOverlayMenuToggle }) => {
         <div className="hidden md:flex space-x-8 text-sm font-light tracking-widest uppercase text-white">
           <Link to="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle('experiences')}>Experiences</Link>
           <Link to="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle('inventory')}>Inventory</Link>
-          <Link to="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>Pre-Order</Link>
+          <Link to="/pre-order" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>Pre-Order</Link>
           <Link to="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>Meet the Team</Link>
           <Link to="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>About Us</Link>
         </div>
