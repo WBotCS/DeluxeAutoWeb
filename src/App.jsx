@@ -76,7 +76,7 @@ const inventoryMenuData = [
 
   {
     id: 'vehicle-finder-service',
-    title: 'Vehicle Finder Service',
+    title: 'Vehicle Service',
     mainImage: '/sf8_1.webp',
     path: '/inventory/vehicle-finder-service',
     subCategories: [
