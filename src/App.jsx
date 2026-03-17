@@ -69,7 +69,7 @@ const inventoryMenuData = [
     mainImage: '/01-italia.webp',
     path: '/inventory/pre-owned',
     subCategories: [
-      { name: 'All Pre-Owned', image: '/01-italia.webp', path: '/inventory/pre-owned' },
+      { name: 'Pre-Owned', image: '/01-italia.webp', path: '/inventory/pre-owned' },
       { name: 'Certified Pre-Owned', image: '/Sainz-2024-mexico.webp', path: '/inventory/certified-pre-owned' },
     ],
   },

@@ -53,9 +53,8 @@ const NewVehiclesPage = () => {
       <h1 className="text-6xl font-thin px-6 mt-16 mb-8">New Vehicles</h1>
       <div className="flex min-h-[calc(100vh-64px-4rem)]">
           {/* Left Sidebar - Filters */}
-          <div className={`bg-black shadow-lg transition-all duration-300 flex-shrink-0 ${showFilters ? 'w-1/4 p-6' : 'w-0 overflow-hidden'}`}>
-            {showFilters && (
-              <>
+          <div className={`bg-black shadow-lg transition-all duration-300 flex-shrink-0 ${showFilters ? 'w-1/4 p-6' : 'w-0 p-0 overflow-hidden'}`}>
+              <div className={`transition-opacity duration-300 ${showFilters ? 'opacity-100' : 'opacity-0'}`}>
                 <div className="flex justify-end items-center mb-6">
                   <button className="text-sm uppercase text-gray-400 hover:text-white transition-colors">Clear All</button>
                 </div>
@@ -146,8 +145,7 @@ const NewVehiclesPage = () => {
 
 
                 </div>
-              </>
-            )}
+              </div>
           </div>
 
         {/* Right Content Area - Vehicle Listings */}
