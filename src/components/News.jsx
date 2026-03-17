@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const newsData = [
   {
@@ -80,7 +81,7 @@ const News = () => {
             </p>
             
             <button className="group flex items-center text-black text-xs md:text-sm font-bold tracking-widest uppercase hover:text-red-600 transition-colors">
-                Read More
+                See More
                 <span className="ml-2 border border-gray-300 rounded-full p-2 group-hover:border-red-600 transition-colors">
                 <ChevronRight size={14} />
                 </span>
@@ -126,7 +127,7 @@ const News = () => {
             ))}
         </div>
         <div className="w-12 h-px bg-gray-300"></div>
-        <a href="#" className="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-black transition-colors">View All News</a>
+        <Link to="/inventory/new-vehicles" className="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-black transition-colors">View All Vehicles</Link>
       </div>
     </div>
   );

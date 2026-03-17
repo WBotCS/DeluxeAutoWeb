@@ -50,7 +50,7 @@ const NewVehiclesPage = () => {
 
   return (
     <div className="bg-black min-h-screen text-white pt-16">
-      <h1 className="text-6xl font-thin px-6 mt-16 mb-8">Available Vehicles</h1>
+      <h1 className="text-6xl font-thin px-6 mt-16 mb-8">New Vehicles</h1>
       <div className="flex min-h-[calc(100vh-64px-4rem)]">
           {/* Left Sidebar - Filters */}
           <div className={`bg-black shadow-lg transition-all duration-300 flex-shrink-0 ${showFilters ? 'w-1/4 p-6' : 'w-0 overflow-hidden'}`}>

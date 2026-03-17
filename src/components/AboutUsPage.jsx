@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer';
 
 const AboutUsPage = () => {
   return (
@@ -24,7 +25,7 @@ const AboutUsPage = () => {
             </div>
             <div>
               <p className="text-lg text-gray-900 leading-relaxed">
-                Established in [Year] by [Founder's Name], Deluxe AutoWeb began with a vision to connect people with their ideal vehicles. We have grown into a trusted name in the automotive industry, consistently expanding our inventory and services to meet the diverse needs of our clientele.
+                Established in [Year] by [Founder's Name], Deluxe Auto began with a vision to connect people with their ideal vehicles. We have grown into a trusted name in the automotive industry, consistently expanding our inventory and services to meet the diverse needs of our clientele.
               </p>
             </div>
           </div>
@@ -32,23 +33,27 @@ const AboutUsPage = () => {
       </div>
 
       {/* Values Section */}
-      <div className="container mx-auto px-6 py-16 max-w-4xl">
+      <div className="container mx-auto px-6 py-16 text-white">
         <h2 className="text-4xl font-thin text-center mb-12">Our Values</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center p-6 bg-black border border-gray-700 rounded-lg shadow-md">
-            <h3 className="text-2xl font-light mb-4">Trust</h3>
-            <p className="text-gray-400">Building lasting relationships through honesty and integrity.</p>
-          </div>
-          <div className="text-center p-6 bg-black border border-gray-700 rounded-lg shadow-md">
-            <h3 className="text-2xl font-light mb-4">Quality</h3>
-            <p className="text-gray-400">Offering a curated selection of reliable and exceptional vehicles.</p>
-          </div>
-          <div className="text-center p-6 bg-black border border-gray-700 rounded-lg shadow-md">
-            <h3 className="text-2xl font-light mb-4">Service</h3>
-            <p className="text-gray-400">Dedicated to customer satisfaction from selection to ownership.</p>
-          </div>
+            <div className="p-0 bg-black shadow-md">
+              <img src="/carWinding.webp" alt="Trust" className="w-full h-72 object-cover" />
+              <h3 className="text-2xl font-light mt-4 mb-2 text-white text-left">Trust</h3>
+              <p className="text-gray-300 pb-6 text-left">We build lasting relationships through transparent communication and unwavering integrity. Our clients can depend on us for honest advice and fair dealings.</p>
+            </div>
+            <div className="p-0 bg-black shadow-md">
+              <img src="/lot.webp" alt="Quality" className="w-full h-72 object-cover" />
+              <h3 className="text-2xl font-light mt-4 mb-2 text-white text-left">Quality</h3>
+              <p className="text-gray-300 pb-6 text-left">We offer a meticulously curated selection of reliable and exceptional vehicles. Each car is hand-picked and rigorously inspected to meet our high standards.</p>
+            </div>
+            <div className="p-0 bg-black shadow-md">
+              <img src="/carTech.jpg" alt="Service" className="w-full h-72 object-cover" />
+              <h3 className="text-2xl font-light mt-4 mb-2 text-white text-left">Service</h3>
+              <p className="text-gray-300 pb-6 text-left">Our dedication to customer satisfaction extends from the moment you browse our selection to long after you drive off the lot. We are here to support you throughout your ownership experience.</p>
+            </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

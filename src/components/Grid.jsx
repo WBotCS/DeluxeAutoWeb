@@ -48,7 +48,7 @@ const Grid = () => {
 
       {/* Bottom Left - Sports Cars */}
       <GridItem 
-        category="Showroom"
+        category="Highly Desirable"
         title="The Featured Fleet"
         image="/Ferrari-MAIN-IMAGE-1.jpg"
       />
