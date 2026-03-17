@@ -66,12 +66,47 @@ const VehicleCard = ({ vehicle }) => {
         <p className="text-gray-400 text-sm mb-2">{vehicle.mileage}</p>
         <p className="text-white text-lg font-medium">{vehicle.price}</p>
         <p className="text-gray-500 text-sm mt-2">{vehicle.availability}</p>
-        {/* Add more features as seen in the example */}
-        <div className="mt-4 pt-4 border-t border-gray-700 text-sm text-gray-400">
-          <p className="flex items-center"><span className="mr-2">•</span>EPA EST. RANGE: {vehicle.epaRange}</p>
-          <p className="flex items-center"><span className="mr-2">•</span>POWER: {vehicle.power}</p>
-          <p className="flex items-center"><span className="mr-2">•</span>0-60 MPH: {vehicle.acceleration}</p>
+        
+        <div className="flex justify-around items-center text-center mt-6 py-4 border-y border-gray-700">
+          <div className="flex-1">
+            <p className="text-xs text-gray-400 uppercase">EPA-EST. RANGE</p>
+            <p className="text-lg font-medium text-white">{vehicle.epaRange}</p>
+          </div>
+          <div className="border-l border-gray-700 h-10"></div>
+          <div className="flex-1">
+            <p className="text-xs text-gray-400 uppercase">POWER</p>
+            <p className="text-lg font-medium text-white">{vehicle.power}</p>
+          </div>
+          <div className="border-l border-gray-700 h-10"></div>
+          <div className="flex-1">
+            <p className="text-xs text-gray-400 uppercase">0-60 MPH</p>
+            <p className="text-lg font-medium text-white">{vehicle.acceleration}</p>
+          </div>
         </div>
+
+        <div className="grid grid-cols-2 gap-y-4 text-sm text-gray-400 mt-6">
+          <div className="flex items-center">
+            <span className="w-2 h-2 rounded-full bg-gray-600 mr-2"></span>
+            <p>Color: <span className="text-white">{vehicle.color}</span></p>
+          </div>
+          <div className="flex items-center">
+            <span className="w-2 h-2 rounded-full bg-gray-600 mr-2"></span>
+            <p>Engine: <span className="text-white">{vehicle.engine}</span></p>
+          </div>
+          <div className="flex items-center">
+            <span className="w-2 h-2 rounded-full bg-gray-600 mr-2"></span>
+            <p>Drivetrain: <span className="text-white">{vehicle.drivetrain}</span></p>
+          </div>
+          <div className="flex items-center">
+            <span className="w-2 h-2 rounded-full bg-gray-600 mr-2"></span>
+            <p>Transmission: <span className="text-white">{vehicle.transmission}</span></p>
+          </div>
+          <div className="flex items-center">
+            <span className="w-2 h-2 rounded-full bg-gray-600 mr-2"></span>
+            <p>Fuel Type: <span className="text-white">{vehicle.fuelType}</span></p>
+          </div>
+        </div>
+
         <button className="w-full text-center text-white text-sm uppercase px-4 py-2 mt-4 border border-white/30 rounded-full hover:bg-white hover:text-black transition-all duration-300">
           More Features
         </button>

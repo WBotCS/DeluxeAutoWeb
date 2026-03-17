@@ -5,21 +5,21 @@ import { Link } from 'react-router-dom';
 const newsData = [
   {
     id: 0,
-    title: "FERRARI UNVEILS 2025 LIVERY OF 499P NUMBERS 50 AND 51",
-    description: "Ferrari officially marked the start of its third season in the FIA World Endurance Championship's top class by unveiling the 2025 livery of the 499Ps which will compete under the official Ferrari - AF Corse team banner.",
-    image: "/sf8_1.webp",
+    title: "2025 Lexus LM350h",
+    description: "The 2025 Lexus LM350h is a flagship luxury hybrid minivan designed for ultimate rear-seat comfort, often described as a \"private jet\" on wheels. Featuring a 2.5L hybrid powertrain with ~247 horsepower and E-Four all-wheel drive, it prioritizes, smooth, quiet, and efficient transport, primarily for high-end chauffeur markets.",
+    image: "/LM.png",
   },
   {
     id: 1,
-    title: "THE MOST ANTICIPATED TEST",
-    description: "The 296 Challenge undergoes international press scrutiny at the Monteblanco circuit",
-    image: "/ferrari-296-gtb-review-specs-pricing-features-videos-and-more.webp",
+    title: "2025 Cadillac Escalade ESV Sport Premium",
+    description: "The 2025 Cadillac Escalade ESV Sport Premium is the top-tier extended-length luxury SUV, combining maximum passenger space with high-performance styling. It features a 6.2L V8 engine (or available 682-HP supercharged V8), gloss black exterior accents, 22-inch to 24-inch wheels, and an extensive 55-inch curved display interior.",
+    image: "/escalade.webp",
   },
   {
     id: 2,
-    title: "SCUDERIA FERRARI HP ANNOUNCES AMBIPAR AS TEAM PARTNER",
-    description: "Scuderia Ferrari HP is pleased to announce a new partnership with Ambipar, a global leader in environmental solutions, as a Team Partner.",
-    image: "/hamilton-leclerc-ferrari-suits-2025.avif",
+    title: "2025 Lexus LX700h",
+    description: "The 2025 Lexus LX 700h is a new flagship luxury hybrid SUV featuring a 3.4L twin-turbo V6 hybrid powertrain producing 457 horsepower and 583 lb-ft of torque. It introduces an off-road-focused Overtrail trim, 10-speed transmission, standard 4WD, and 8,000 lbs towing capacity.",
+    image: "/Lx.avif",
   }
 ];
 
@@ -89,11 +89,11 @@ const News = () => {
             </div>
 
             {/* Right: Image */}
-            <div className="w-full md:w-1/2 relative flex justify-center">
+            <div className="w-full md:w-1/2 relative flex justify-center overflow-hidden">
             <img 
                 src={newsData[currentSlide].image} 
                 alt={newsData[currentSlide].title} 
-                className="w-full max-w-[600px] h-auto object-cover shadow-xl aspect-square"
+                className={`w-full max-w-[600px] h-auto object-contain shadow-xl aspect-square ${newsData[currentSlide].image === '/LM.png' ? 'scale-110 object-center' : ''}`}
             />
             </div>
         </div>
