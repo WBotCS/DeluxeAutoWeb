@@ -8,45 +8,46 @@ import Grid from './components/Grid';
 import Footer from './components/Footer';
 import OverlayMenu from './components/OverlayMenu';
 import NewVehiclesPage from './components/NewVehiclesPage';
-import PreOrderPage from './components/PreOrderPage'; // New Import
+import PreOrderPage from './components/PreOrderPage';
+import AboutUsPage from './components/AboutUsPage'; // New Import
 
 const experienceMenuData = [
   {
-    id: 'driving-experience',
-    title: 'The Driving Experience',
-    mainImage: '/the driving experience.webp',
+    id: 'test-drives',
+    title: 'Exclusive Test Drives',
+    mainImage: '/generic-sportscar.webp',
     subCategories: [
-      { name: 'VIP Test Drives', image: '/ferrari-296-gtb-review-specs-pricing-features-videos-and-more.webp' },
-      { name: 'Home Delivery/Trial', image: '/Ferrari-MAIN-IMAGE-1.jpg' },
+      { name: 'VIP Test Drives', image: '/generic-luxury-car.webp' },
+      { name: 'Home Delivery/Trial', image: '/generic-sedan.webp' },
     ],
   },
   {
     id: 'events-community',
-    title: 'Events & Community',
-    mainImage: '/events and community.avif',
+    title: 'Dealership Events',
+    mainImage: '/dealership-event.webp',
     subCategories: [
-      { name: 'Owners\' Track Days', image: '/sf8_1.webp' },
-      { name: 'Cars & Coffee / Gala Nights', image: '/01-italia.webp' },
-      { name: 'Road Rallies', image: '/Sainz-2024-mexico.webp' },
+      { name: 'Owner Meet-ups', image: '/cars-on-display.webp' },
+      { name: 'Community Galas', image: '/car-show.webp' },
+      { name: 'Local Rallies', image: '/road-rally.webp' },
     ],
   },
   {
-    id: 'ownership-perks',
-    title: 'Ownership Perks',
-    mainImage: '/ownership perk.jpg',
+    id: 'ownership-benefits',
+    title: 'Ownership Benefits',
+    mainImage: '/ownership-benefits.webp',
     subCategories: [
-      { name: 'The Owner\'s Lounge', image: '/F677_still_02_v11_169.avif' },
-      { name: 'Concierge Service', image: '/hamilton-leclerc-ferrari-suits-2025.avif' },
-      { name: 'Technical Clinics', image: '/Ferrari-MAIN-IMAGE-1.jpg' },
+      { name: 'Customer Lounge', image: '/customer-lounge.webp' },
+      { name: 'Concierge Service', image: '/concierge-service.webp' },
+      { name: 'Maintenance Clinics', image: '/maintenance-clinic.webp' },
     ],
   },
   {
-    id: 'customization-heritage',
-    title: 'Customization & Heritage',
-    mainImage: '/customization and heritage.webp',
+    id: 'customization-care',
+    title: 'Customization & Care',
+    mainImage: '/customization-care.webp',
     subCategories: [
-      { name: 'The Design Studio', image: '/01-italia.webp' },
-      { name: 'The Heritage Collection', image: '/sf8_1.webp' },
+      { name: 'Personalization Studio', image: '/design-studio.webp' },
+      { name: 'Vehicle Detailing', image: '/detailing-service.webp' },
     ],
   },
 ];
@@ -133,6 +134,7 @@ function App() {
           } />
           <Route path="/inventory/new-vehicles" element={<NewVehiclesPage />} />
           <Route path="/pre-order" element={<PreOrderPage />} />
+          <Route path="/about-us" element={<AboutUsPage />} />
         </Routes>
         <OverlayMenu isOpen={!!currentMenuType} onClose={() => handleOverlayMenuToggle(null)} menuData={menuData} title={title} defaultImages={defaultImages} />
       </div>

@@ -40,7 +40,7 @@ const Navbar = ({ onOverlayMenuToggle }) => {
         {/* Logo */}
         <div className="flex items-center">
           <Link to="/" className="text-white" onClick={() => onOverlayMenuToggle(null)}>
-            <img src="/logo.png" alt="Ferrari Logo" className="h-12 w-auto brightness-150" />
+            <img src="/logo.png" alt="Dealership Logo" className="h-12 w-auto" />
           </Link>
         </div>
 
@@ -49,8 +49,8 @@ const Navbar = ({ onOverlayMenuToggle }) => {
           <Link to="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle('experiences')}>Experiences</Link>
           <Link to="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle('inventory')}>Inventory</Link>
           <Link to="/pre-order" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>Pre-Order</Link>
-          <Link to="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>Meet the Team</Link>
-          <Link to="#" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>About Us</Link>
+          <Link to="/meet-the-team" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>Meet the Team</Link>
+          <Link to="/about-us" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>About Us</Link>
         </div>
 
         {/* Search & Mobile Toggle */}
@@ -69,11 +69,11 @@ const Navbar = ({ onOverlayMenuToggle }) => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-black absolute top-full w-full py-4 px-6 flex flex-col space-y-4 text-white text-base font-light tracking-widest uppercase border-t border-gray-800">
-          <Link to="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle(null)}>Racing</Link>
-          <Link to="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle(null)}>Sports Cars</Link>
-          <Link to="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle(null)}>Collections</Link>
           <Link to="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle('experiences')}>Experiences</Link>
-          <Link to="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle(null)}>About Us</Link>
+          <Link to="#" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle('inventory')}>Inventory</Link>
+          <Link to="/pre-order" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>Pre-Order</Link>
+          <Link to="/meet-the-team" className="hover:text-ferrari-red transition-colors" onClick={() => onOverlayMenuToggle(null)}>Meet the Team</Link>
+          <Link to="/about-us" className="hover:text-ferrari-red" onClick={() => onOverlayMenuToggle(null)}>About Us</Link>
           <div className="flex items-center pt-4 border-t border-gray-800">
             <span className="mr-2">Search</span>
             <Search size={16} />

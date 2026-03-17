@@ -37,9 +37,9 @@ const VehicleCard = ({ vehicle }) => {
               className={`w-full h-40 flex-shrink-0 ${
                 imageSrc === '/IS350.png' || imageSrc === '/LC.avif' || imageSrc === '/vantage.png'
                   ? 'object-contain'
-                  : 'object-cover'
-              } ${
-                imageSrc === '/LCInterior.avif' || imageSrc === '/interiorvantage.avif' ? 'object-contain object-[50%_0%]' : ''
+                  : imageSrc === '/LCInterior.avif' || imageSrc === '/interiorvantage.avif'
+                    ? 'object-cover object-top'
+                    : 'object-cover'
               }`}
             />
           ))}
