@@ -69,7 +69,7 @@ const VehicleCard = ({ vehicle }) => {
         
         <div className="flex justify-around items-center text-center mt-6 py-4 border-y border-gray-700">
           <div className="flex-1">
-            <p className="text-xs text-gray-400 uppercase">EPA-EST. RANGE</p>
+            <p className="text-xs text-gray-400 uppercase">ENGINE</p>
             <p className="text-lg font-medium text-white">{vehicle.epaRange}</p>
           </div>
           <div className="border-l border-gray-700 h-10"></div>
@@ -88,6 +88,10 @@ const VehicleCard = ({ vehicle }) => {
           <div className="flex items-center">
             <span className="w-2 h-2 rounded-full bg-gray-600 mr-2"></span>
             <p>Color: <span className="text-white">{vehicle.color}</span></p>
+          </div>
+          <div className="flex items-center">
+            <span className="w-2 h-2 rounded-full bg-gray-600 mr-2"></span>
+            <p>Trim: <span className="text-white">{vehicle.trim}</span></p>
           </div>
           <div className="flex items-center">
             <span className="w-2 h-2 rounded-full bg-gray-600 mr-2"></span>
