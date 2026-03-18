@@ -7,7 +7,7 @@ const NewVehiclesPage = () => {
   const vehicles = [
     {
       id: 1,
-      name: 'LexusIS350 F-Sport',
+      name: 'Lexus IS350 F-Sport',
       images: ['/IS350.png', '/IS350I.jpg.avif'],
       price: 'Starting from $54,000',
       mileage: 'Brand New 2025',
