@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Gauge, Car, Tag, Cog, Settings, Fuel } from 'lucide-react';
 
 const VehicleCard = ({ vehicle }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -35,7 +35,7 @@ const VehicleCard = ({ vehicle }) => {
               src={imageSrc}
               alt={vehicle.name}
               className={`w-full h-40 flex-shrink-0 ${
-                imageSrc === '/IS350.png' || imageSrc === '/LC.avif' || imageSrc === '/vantage.png'
+                imageSrc === '/IS350.png' || imageSrc === '/LC.avif' || imageSrc === '/vantage.png' || imageSrc === '/Lx.avif' || imageSrc === '/LM.png' || imageSrc === '/escalade.webp'
                   ? 'object-contain'
                   : imageSrc === '/LCInterior.avif' || imageSrc === '/interiorvantage.avif'
                     ? 'object-cover object-top'
@@ -90,23 +90,23 @@ const VehicleCard = ({ vehicle }) => {
             <p>Color: <span className="text-white">{vehicle.color}</span></p>
           </div>
           <div className="flex items-center">
-            <span className="w-2 h-2 rounded-full bg-gray-600 mr-2"></span>
+            <Tag size={16} className="text-gray-400 mr-2" />
             <p>Trim: <span className="text-white">{vehicle.trim}</span></p>
           </div>
           <div className="flex items-center">
-            <span className="w-2 h-2 rounded-full bg-gray-600 mr-2"></span>
+            <Car size={16} className="text-gray-400 mr-2" />
             <p>Engine: <span className="text-white">{vehicle.engine}</span></p>
           </div>
           <div className="flex items-center">
-            <span className="w-2 h-2 rounded-full bg-gray-600 mr-2"></span>
+            <Cog size={16} className="text-gray-400 mr-2" />
             <p>Drivetrain: <span className="text-white">{vehicle.drivetrain}</span></p>
           </div>
           <div className="flex items-center">
-            <span className="w-2 h-2 rounded-full bg-gray-600 mr-2"></span>
+            <Settings size={16} className="text-gray-400 mr-2" />
             <p>Transmission: <span className="text-white">{vehicle.transmission}</span></p>
           </div>
           <div className="flex items-center">
-            <span className="w-2 h-2 rounded-full bg-gray-600 mr-2"></span>
+            <Fuel size={16} className="text-gray-400 mr-2" />
             <p>Fuel Type: <span className="text-white">{vehicle.fuelType}</span></p>
           </div>
         </div>

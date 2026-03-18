@@ -56,6 +56,9 @@ const News = () => {
 
   return (
     <div className="w-full bg-white text-black min-h-screen flex flex-col justify-center py-16 md:py-0 overflow-hidden relative">
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 pt-16">
+        <p className="text-s uppercase tracking-widest text-gray-500">Featured Fleets</p>
+      </div>
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between relative flex-grow pb-20">
         
         {/* Left Arrow - Absolute Positioned */}

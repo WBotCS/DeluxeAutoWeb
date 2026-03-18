@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import StartEngine from './components/StartEngine';
@@ -118,8 +118,19 @@ function App() {
 
   const { menuData, title, defaultImages } = getMenuProps();
 
+  function ScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+  }
+
   return (
     <Router>
+      <ScrollToTop />
       <div className="bg-black min-h-screen">
         <Navbar onOverlayMenuToggle={handleOverlayMenuToggle} />
         <Routes>
