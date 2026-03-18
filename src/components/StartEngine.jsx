@@ -8,7 +8,7 @@ const StartEngine = () => {
     {
       id: 0,
       video: "/LFACon.mp4",
-      subtitle: "Sports Cars",
+      subtitle: "A SYMPHONY OF POWER",
       title: "Start Your Engine",
       cta: "Discover Excellences"
     },

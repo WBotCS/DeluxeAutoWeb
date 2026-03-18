@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="relative w-full h-screen bg-[#690000] overflow-hidden">
       {/* Background Image - Full Screen */}
       <img 
-        src="/F677_still_02_v11_169.avif" 
+        src="/byd.webp" 
         alt="Ferrari SF-25" 
         className="absolute inset-0 w-full h-full object-cover"
       />
@@ -19,7 +19,7 @@ const Hero = () => {
         {/* Text Content */}
         <div className="z-20">
           <h1 className="text-4xl md:text-6xl font-light text-white tracking-wider mb-6 uppercase font-sans">
-            Ferrari SF-25
+            Yangwang U9
           </h1>
           
           <button className="group flex items-center mx-auto text-white text-sm md:text-base font-bold tracking-widest uppercase border border-white/30 hover:bg-white hover:text-black px-8 py-3 rounded-full transition-all duration-300">
