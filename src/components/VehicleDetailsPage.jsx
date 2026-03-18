@@ -365,7 +365,7 @@ const VehicleDetailsPage = () => {
             </div>
           </div>
 
-          <p className="text-white text-3xl font-bold mb-6">{vehicle.price}</p>
+          <p className="text-white text-3xl font-thin mb-6">{vehicle.price}</p>
 
           <button className="w-full text-center text-white bg-red-600 px-6 py-3 uppercase font-bold text-sm rounded-full hover:bg-red-700 transition-colors mb-8">
             Schedule a Demo Drive
@@ -378,8 +378,8 @@ const VehicleDetailsPage = () => {
               <li>Used: {vehicle.details.used ? 'Yes' : 'No'}</li>
               <li>Odometer: {vehicle.details.odometer}</li>
               <li>VIN: {vehicle.details.vin}</li>
-              <li>Review the <a href={vehicle.details.historyReport} className="text-red-600 hover:underline">Vehicle History Report</a> to check ownership history and if this vehicle has been in an accident</li>
-              <li>Learn more about <a href={vehicle.details.standards} className="text-red-600 hover:underline">Cosmetic and Mechanical Standards</a></li>
+              <li>Review the <a href={vehicle.details.historyReport} className="text-white hover:underline">Vehicle History Report</a> to check ownership history and if this vehicle has been in an accident</li>
+              <li>Learn more about <a href={vehicle.details.standards} className="text-white hover:underline">Cosmetic and Mechanical Standards</a></li>
             </ul>
           </div>
 
