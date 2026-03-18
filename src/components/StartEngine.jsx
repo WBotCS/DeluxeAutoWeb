@@ -7,17 +7,17 @@ const StartEngine = () => {
   const slides = [
     {
       id: 0,
-      video: "/video1.mp4",
+      video: "/LFACon.mp4",
       subtitle: "Sports Cars",
       title: "Start Your Engine",
-      cta: "Discover The Ferrari Line Up"
+      cta: "Discover Excellences"
     },
     {
       id: 1,
       video: "/video2.mp4",
-      subtitle: "Racing DNA",
-      title: "Unleash The Power",
-      cta: "Explore Racing Series"
+      subtitle: "PERFORMANCE, HEIGHTENED",
+      title: "Take every drive to the next level on or off-road.",
+      cta: "Explore LX700h"
     }
   ];
 
@@ -34,7 +34,7 @@ const StartEngine = () => {
                 loop
                 muted
                 playsInline
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover"
             >
                 <source src={slide.video} type="video/mp4" />
                 Your browser does not support the video tag.
@@ -49,7 +49,7 @@ const StartEngine = () => {
             <h3 className="text-sm md:text-base font-bold uppercase tracking-widest mb-4 animate-fade-in">
                 {slides[currentSlide].subtitle}
             </h3>
-            <h2 className="text-4xl md:text-6xl font-light uppercase tracking-wider mb-8 animate-fade-in-up">
+            <h2 className={`font-light uppercase tracking-wider mb-8 animate-fade-in-up ${currentSlide === 1 ? 'text-2xl md:text-3xl' : 'text-4xl md:text-6xl'}`}>
                 {slides[currentSlide].title}
             </h2>
         </div>
