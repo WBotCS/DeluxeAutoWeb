@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Cog, GitBranch, GitCommit, Disc, Circle, CircleDot, Car, Armchair, Volume2, Shield, FileText } from 'lucide-react';
 
 const VehicleDetailsPage = () => {
   const { id } = useParams();
@@ -296,6 +296,20 @@ const VehicleDetailsPage = () => {
         },
   ];
 
+const iconMap = {
+    drivetrain: <Cog size={16} className="text-gray-400 mr-2" />,
+    suspension: <GitBranch size={16} className="text-gray-400 mr-2" />,
+    steering: <GitCommit size={16} className="text-gray-400 mr-2" />,
+    brakes: <Disc size={16} className="text-gray-400 mr-2" />,
+    wheels: <Circle size={16} className="text-gray-400 mr-2" />,
+    tires: <CircleDot size={16} className="text-gray-400 mr-2" />,
+    exterior: <Car size={16} className="text-gray-400 mr-2" />,
+    interior: <Armchair size={16} className="text-gray-400 mr-2" />,
+    audio: <Volume2 size={16} className="text-gray-400 mr-2" />,
+    safety: <Shield size={16} className="text-gray-400 mr-2" />,
+    warranty: <FileText size={16} className="text-gray-400 mr-2" />,
+  };
+
   const vehicle = vehicles.find((v) => v.id === parseInt(id));
 
   if (!vehicle) {
@@ -388,9 +402,12 @@ const VehicleDetailsPage = () => {
             <h2 className="text-2xl font-light mb-4">Configuration</h2>
             <div className="grid grid-cols-2 gap-y-2 text-gray-300">
               {Object.entries(vehicle.details.configuration).map(([key, value]) => (
-                <p key={key} className="capitalize">
-                  {key.replace(/([A-Z])/g, ' $1').trim()}: <span className="text-white font-medium">{value}</span>
-                </p>
+                <div key={key} className="flex items-center">
+                  {iconMap[key]}
+                  <p className="capitalize">
+                    {key.replace(/([A-Z])/g, ' $1').trim()}: <span className="text-white font-medium">{value}</span>
+                  </p>
+                </div>
               ))}
             </div>
           </div>
