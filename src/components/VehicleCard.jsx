@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Gauge, Car, Tag, Cog, Settings, Fuel } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const VehicleCard = ({ vehicle }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -18,13 +19,14 @@ const VehicleCard = ({ vehicle }) => {
   };
 
   return (
-    <div
+    <Link
+      to={`/vehicles/${vehicle.id}`}
       key={vehicle.id}
-      className="bg-black rounded-lg overflow-hidden shadow-lg relative group border border-gray-700 hover:border-white transition-all duration-300"
+      className="bg-black rounded-lg overflow-hidden shadow-lg relative group border border-gray-700 hover:border-white transition-all duration-300 block"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden pointer-events-none">
         <div
           className="flex transition-transform duration-300 ease-in-out"
           style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
@@ -61,7 +63,7 @@ const VehicleCard = ({ vehicle }) => {
           </>
         )}
       </div>
-      <div className="p-4">
+      <div className="p-4 pointer-events-none">
         <h3 className="text-xl font-light uppercase mb-1">{vehicle.name}</h3>
         <p className="text-gray-400 text-sm mb-2">{vehicle.mileage}</p>
         <p className="text-white text-lg font-medium">{vehicle.price}</p>
@@ -111,11 +113,11 @@ const VehicleCard = ({ vehicle }) => {
           </div>
         </div>
 
-        <button className="w-full text-center text-white text-sm uppercase px-4 py-2 mt-4 border border-white/30 rounded-full hover:bg-white hover:text-black transition-all duration-300">
+        <Link to={`/vehicles/${vehicle.id}`} className="w-full text-center text-white text-sm uppercase px-4 py-2 mt-4 border border-white/30 rounded-full hover:bg-white hover:text-black transition-all duration-300 block">
           More Features
-        </button>
+        </Link>
       </div>
-    </div>
+    </Link>
   );
 };
 

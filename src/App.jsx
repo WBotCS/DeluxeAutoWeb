@@ -10,6 +10,7 @@ import OverlayMenu from './components/OverlayMenu';
 import NewVehiclesPage from './components/NewVehiclesPage';
 import PreOrderPage from './components/PreOrderPage';
 import AboutUsPage from './components/AboutUsPage'; // New Import
+import VehicleDetailsPage from './components/VehicleDetailsPage';
 
 const experienceMenuData = [
   {
@@ -146,6 +147,7 @@ function App() {
           <Route path="/inventory/new-vehicles" element={<NewVehiclesPage />} />
           <Route path="/pre-order" element={<PreOrderPage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
+          <Route path="/vehicles/:id" element={<VehicleDetailsPage />} />
         </Routes>
         <OverlayMenu isOpen={!!currentMenuType} onClose={() => handleOverlayMenuToggle(null)} menuData={menuData} title={title} defaultImages={defaultImages} />
       </div>
