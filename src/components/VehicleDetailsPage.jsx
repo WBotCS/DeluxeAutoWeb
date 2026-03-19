@@ -400,8 +400,10 @@ const iconMap = {
           {/* Configuration */}
           <div>
             <h2 className="text-2xl font-light mb-4">Configuration</h2>
-            <div className="grid grid-cols-2 gap-y-2 text-gray-300">
-              {Object.entries(vehicle.details.configuration).map(([key, value]) => (
+            <div className="space-y-2 text-gray-300">
+              {Object.entries(vehicle.details.configuration)
+                .filter(([key]) => key !== 'warranty')
+                .map(([key, value]) => (
                 <div key={key} className="flex items-center">
                   {iconMap[key]}
                   <p className="capitalize">
@@ -409,6 +411,15 @@ const iconMap = {
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Warranty Section */}
+          <div className="mt-8">
+            <h2 className="text-2xl font-light mb-4">Warranty</h2>
+            <div className="flex items-center text-gray-300">
+              {iconMap['warranty']}
+              <p>Warranty: <span className="text-white font-medium">{vehicle.details.configuration.warranty}</span></p>
             </div>
           </div>
         </div>

@@ -147,88 +147,20 @@ const NewVehiclesPage = () => {
 
 
                 <div className="space-y-6">
-                  {/* Trim Filter */}
-                  <div className="border-b border-gray-700 pb-6">
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-lg font-light">Trim</h3>
-                      <ChevronRight size={20} className="transform rotate-90 text-gray-400" /> {/* Placeholder for dropdown icon */}
+                  {['Make', 'Year', 'Trim', 'Color', 'Body Type', 'Seating', 'Fuel Type', 'Drivetrain'].map((filterName) => (
+                    <div key={filterName} className="border-b border-gray-700 pb-6">
+                      <div className="flex justify-between items-center">
+                        <h3 className="text-lg font-light">{filterName}</h3>
+                        <ChevronRight size={20} className="transform rotate-90 text-gray-400" />
+                      </div>
                     </div>
-                    {/* Add dropdown content here */}
-                  </div>
-
-                  {/* Search Within Filter */}
-                  <div className="border-b border-gray-700 pb-6">
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-lg font-light">Search Within</h3>
-                      <ChevronRight size={20} className="transform rotate-90 text-gray-400" />
-                    </div>
-                  </div>
-
-                  {/* Color Filter */}
-                  <div className="border-b border-gray-700 pb-6">
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-lg font-light">Color</h3>
-                      <ChevronRight size={20} className="transform rotate-90 text-gray-400" />
-                    </div>
-                  </div>
-
-                  {/* Interior Filter */}
-                  <div className="border-b border-gray-700 pb-6">
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-lg font-light">Interior</h3>
-                      <ChevronRight size={20} className="transform rotate-90 text-gray-400" />
-                    </div>
-                  </div>
-
-                  {/* Appearance Filter */}
-                  <div className="border-b border-gray-700 pb-6">
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-lg font-light">Appearance</h3>
-                      <ChevronRight size={20} className="transform rotate-90 text-gray-400" />
-                    </div>
-                  </div>
-
-                  {/* Roof Filter */}
-                  <div className="border-b border-gray-700 pb-6">
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-lg font-light">Roof</h3>
-                      <ChevronRight size={20} className="transform rotate-90 text-gray-400" />
-                    </div>
-                  </div>
-
-                  {/* Wheels Filter */}
-                  <div className="border-b border-gray-700 pb-6">
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-lg font-light">Wheels</h3>
-                      <ChevronRight size={20} className="transform rotate-90 text-gray-400" />
-                    </div>
-                  </div>
-
-                  {/* Driver Assistance System Filter */}
-                  <div className="border-b border-gray-700 pb-6">
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-lg font-light">Driver Assistance System</h3>
-                      <ChevronRight size={20} className="transform rotate-90 text-gray-400" />
-                    </div>
-                  </div>
-
-                  {/* Sound System Filter */}
-                  <div className="border-b border-gray-700 pb-6">
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-lg font-light">Sound System</h3>
-                      <ChevronRight size={20} className="transform rotate-90 text-gray-400" />
-                    </div>
-                  </div>
-
-                  {/* Seating Filter */}
+                  ))}
                   <div className="pb-6">
                     <div className="flex justify-between items-center">
-                      <h3 className="text-lg font-light">Seating</h3>
+                      <h3 className="text-lg font-light">Range (EV)</h3>
                       <ChevronRight size={20} className="transform rotate-90 text-gray-400" />
                     </div>
                   </div>
-
-
                 </div>
               </div>
           </div>
