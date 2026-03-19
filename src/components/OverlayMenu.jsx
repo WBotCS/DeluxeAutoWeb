@@ -20,23 +20,35 @@ const OverlayMenu = ({ isOpen, onClose, menuData, title, defaultImages }) => {
 
         <nav className="flex-grow">
           {menuData.map((category) => (
-            <a
-              key={category.id}
-              href="#"
-              className="flex items-center justify-between py-3 border-b border-gray-700 hover:text-red-600 transition-colors group"
-              onMouseEnter={() => {
-                clearTimeout(hoverTimeoutRef.current);
-                setHoveredCategory(category);
-              }}
-              onMouseLeave={() => {
-                hoverTimeoutRef.current = setTimeout(() => {
-                  setHoveredCategory(null);
-                }, 200);
-              }}
-            >
-              <span className="text-xl font-light uppercase">{category.title}</span>
-              <ChevronRight size={20} className="group-hover:text-red-600" />
-            </a>
+            category.id === 'new-vehicles' || category.id === 'pre-owned' ? (
+              <Link
+                key={category.id}
+                to={category.path || '#'}
+                onClick={onClose}
+                className="flex items-center justify-between py-3 border-b border-gray-700 hover:text-red-600 transition-colors group"
+              >
+                <span className="text-xl font-light uppercase">{category.title}</span>
+                <ChevronRight size={20} className="group-hover:text-red-600" />
+              </Link>
+            ) : (
+              <a
+                key={category.id}
+                href="#"
+                className="flex items-center justify-between py-3 border-b border-gray-700 hover:text-red-600 transition-colors group"
+                onMouseEnter={() => {
+                  clearTimeout(hoverTimeoutRef.current);
+                  setHoveredCategory(category);
+                }}
+                onMouseLeave={() => {
+                  hoverTimeoutRef.current = setTimeout(() => {
+                    setHoveredCategory(null);
+                  }, 200);
+                }}
+              >
+                <span className="text-xl font-light uppercase">{category.title}</span>
+                <ChevronRight size={20} className="group-hover:text-red-600" />
+              </a>
+            )
           ))}
         </nav>
       </div>
