@@ -56,7 +56,7 @@ const VehicleDetailsPage = () => {
             interior: 'F-Sport Leather-Trimmed',
             audio: 'Mark Levinson Audio System',
             safety: 'Lexus Safety System+ 2.5',
-            warranty: '4-Year/50,000-Mile Basic'
+            warranty: '4-Year/50,000-Mile Basic, 6-Year/70,000-Mile Powertrain'
           }
         }
       },
@@ -94,7 +94,7 @@ const VehicleDetailsPage = () => {
             interior: 'Semi-Aniline Leather',
             audio: 'Mark Levinson Reference Audio System',
             safety: 'Lexus Safety System+ 2.5',
-            warranty: '4-Year/50,000-Mile Basic'
+            warranty: '4-Year/50,000-Mile Basic, 6-Year/70,000-Mile Powertrain'
           }
         }
       },
@@ -133,7 +133,7 @@ const VehicleDetailsPage = () => {
             interior: 'Carbon Fiber Trim',
             audio: 'Premium JBL Audio System',
             safety: 'Advanced Driver Assistance Systems',
-            warranty: '3-Year/Unlimited-Mile Basic'
+            warranty: '3-Year/Unlimited-Mile Basic, 7-Year Free Maintenance'
           }
         }
       },
@@ -172,7 +172,7 @@ const VehicleDetailsPage = () => {
               interior: 'Leather and Alcantara Trim',
               audio: 'Aston Martin Premium Audio',
               safety: 'Front and Rear Parking Sensors',
-              warranty: '3-Year/Unlimited-Mile Basic'
+              warranty: '3-Year/Unlimited-Miles Basic'
             }
           }
         },
@@ -211,7 +211,7 @@ const VehicleDetailsPage = () => {
                 interior: "Semi-Aniline Leather with Captain's Chairs",
                 audio: 'Mark Levinson Reference Audio System',
                 safety: 'Lexus Safety System+ 3.0',
-                warranty: '4-Year/50,000-Mile Basic'
+                warranty: '4-Year/50,000-Mile Basic, 6-Year/70,000-Mile Powertrain'
               }
             }
           },
@@ -251,7 +251,7 @@ const VehicleDetailsPage = () => {
                 interior: 'Semi-Aniline Leather',
                 audio: 'Mark Levinson Surround Sound System',
                 safety: 'Lexus Safety System+ 3.0',
-                warranty: '4-Year/50,000-Mile Basic'
+                warranty: '4-Year/50,000-Mile Basic, 8-Year/100,000-Mile Hybrid System'
               }
             }
           },
@@ -290,7 +290,7 @@ const VehicleDetailsPage = () => {
                 interior: 'Full Leather Interior',
                 audio: 'AKG Studio Reference 36-speaker System',
                 safety: 'Super Cruise Driver Assistance',
-                warranty: '4-Year/50,000-Mile Basic'
+                warranty: '4-Year/50,000-Mile Basic, 8-Year/100,000-Mile Hybrid System'
             }
           }
         },
